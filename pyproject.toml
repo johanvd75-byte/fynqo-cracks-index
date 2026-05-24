@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling>=1.18"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fynqo-cracks-index"
+version = "0.1.0"
+description = "Python client voor de Cracks Index dataset (HuggingFace + Zenodo). Wrapper rond datasets.load_dataset() met pandas-vriendelijke accessor."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Fynqo", email = "info@fynqo.app" }]
+keywords = [
+  "cracks-index",
+  "schuldhulp",
+  "huggingface",
+  "datasets",
+  "open-data",
+  "nederland",
+  "fynqo",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+]
+dependencies = [
+  "datasets>=2.14",
+  "pandas>=1.5",
+]
+
+[project.urls]
+Homepage = "https://fynqo.app/cracks-index"
+Documentation = "https://github.com/fynqo/fynqo-cracks-index#readme"
+Repository = "https://github.com/fynqo/fynqo-cracks-index"
+Issues = "https://github.com/fynqo/fynqo-cracks-index/issues"
+Dataset = "https://huggingface.co/datasets/jan12456/cracks-index"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fynqo_cracks_index"]
